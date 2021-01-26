@@ -1,6 +1,3 @@
-# EDA-and-Hotel-Cancellation-Predictive-Modeling
-Capstone Project: EDA &amp; Hotel Cancellation Predictive Modeling
-
 # Capstone Project: EDA &amp; Hotel Cancellation Prediction
 > This study analyzes hotel data from the southern part of Portugal to identify why guests are cancelling their reservations and the potential indicators that are causing them to do so. The original data is derived from Nuno Antonio, Ana Almeida, and Luis Nunes who are researchers from Lisbon University Institute and later cleaned/uploaded on [Kaggle](https://www.kaggle.com/jessemostipak/hotel-booking-demand). Python is the choice of program and will be using binary logistic regression to determine the most important indicators.
 
