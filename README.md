@@ -73,6 +73,15 @@ cdf[, 'Churn'] <- as.factor(cdf[, 'Churn'])
 
 Exploratory Data Analysis
 ---
+<table>
+  <tr><th colspan=2>Univariate Analysis</th></tr>
+  <tr><td><img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_deposit_type.png?raw=true"> </td>
+  <td><img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_hoteltype.png?raw=true"> </td></tr>
+  <tr><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_repeatedguests.png?raw=true"> </td><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_year.png?raw=true"> </td></tr>
+  <tr><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/hotel_type.png?raw=true"> </td><td> </td></tr>
+
+
+</table>
 
 
 Solution
