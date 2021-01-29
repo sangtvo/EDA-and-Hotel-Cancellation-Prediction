@@ -81,27 +81,40 @@ Exploratory Data Analysis
   <tr><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/hotel_type.png?raw=true"> </td><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_specialreq.png?raw=true"></td></tr>
 </table>
 
-* adfadf
-* drdf
+* There is a large amount of guest reservations that do not require deposits and a little over 33% of those guests cancel.
+* City hotel guests are more common in Portugal compared to resort hotel guests and 3x higher cancellation rate than resort hotels.
+* Majority of the guests are possibly first-time visitors since they are not repeated guests.
+* The most visited year is 2016, which is more than double the previous year. 
+* Roughly 50% of the reservations with no special requests are cancelled. 
 
 ![adr](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_month_adr.png?raw=true)
+* August has the most booked reservations which is most likely Portugal's tourist peak season.
+* The ***adr*** (average daily rate) for the summer months are higher and are less likely to cancel compared to other months.
+  * This can be partly because of vacation and families have already requested time off from work/school.
+
 ![month](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_month.png?raw=true)
-* daffdaf
-* adfadf
+* It seems that late fall and winter seasons, almost half of the reservations will cancel. 
+* Even though late spring and summer have higher bookings, it is more common that more than half of the reservations will cancel.
+  * This can be partly due to change of plans, scheduling conflicts, or even ilnesses during these times.
 
 ![top10](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/top10.png?raw=true)
+* A large portion of the bookings are Portugeuse followed by British and French citizens. 
+
 ![market_s](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/market_segment.png?raw=true)
-* adsfdafag
-* adsfafaf
+* At least 50% of the bookings are made through an ***Online TA*** (online travel agency) and roughly 25% are ***Offline TA/TO*** (offline travel agents and tour operators).
 
 ![m_seg_wknight](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/segment_wknight_hotel.png?raw=true)
+* Majority of the market segments are heavily skewed and not very many guests stay no more than 5 days. 
+* Week night stays are more prominent for resort hotels than city hotels.
+  * This can be possible due to the fact that many resort hotels have package deals when staying for longer days. 
+
 ![m_seg_wknd](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/segment_wknd_hotel.png?raw=true)
-* dafafdagf
-* adfaf
+* In most market segments, guests stay for at least 1 weekend night.
+* Aviation segment do not book resort hotels, which makes sense since it is very likely they need a short stay for business.
 
 ![lead](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/leadtime.png?raw=true)
-* adsfaf
-* asdfasfd
+* The lead time is the number of days that elapsed between the entering date of the booking into the system and the arrival date.
+  * Roughly after 50 days, bookings are more likely to be canceled.
 
 Solution
 ---
