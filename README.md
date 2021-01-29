@@ -45,9 +45,9 @@ Tech Stack
 Data Preprocessing/Cleaning
 ---
 #### Irrelevant:
-Removed customerID variable since it is not necessary for the purpose of this analysis.
-```r
-cdf$customerID <- NULL
+Drop status because "is_cancelled" feature already determines whether the guest canceled or not as well as dates.
+```python
+df=df.drop(['reservation_status', 'reservation_status_date'], axis=1)
 ```
 
 #### Recoding: 
@@ -67,7 +67,61 @@ cdf[, 'Churn'] <- as.factor(cdf[, 'Churn'])
 ```
 
 #### Missing Data:
+Checking for missing data and calculating percentages of the missing data per column.
+```python
+round(100*(df.isnull().sum()/len(df.index)),2)
+```
+```
+hotel                              0.00
+is_canceled                        0.00
+lead_time                          0.00
+arrival_date_year                  0.00
+arrival_date_month                 0.00
+arrival_date_week_number           0.00
+arrival_date_day_of_month          0.00
+stays_in_weekend_nights            0.00
+stays_in_week_nights               0.00
+adults                             0.00
+children                           0.00
+babies                             0.00
+meal                               0.00
+country                            0.41
+market_segment                     0.00
+distribution_channel               0.00
+is_repeated_guest                  0.00
+previous_cancellations             0.00
+previous_bookings_not_canceled     0.00
+reserved_room_type                 0.00
+assigned_room_type                 0.00
+booking_changes                    0.00
+deposit_type                       0.00
+agent                             13.69
+company                           94.31
+days_in_waiting_list               0.00
+customer_type                      0.00
+adr                                0.00
+required_car_parking_spaces        0.00
+total_of_special_requests          0.00
+reservation_status                 0.00
+reservation_status_date            0.00
+dtype: float64
+```
 
+Fill in missing data with zeroes.
+```python
+df['children']=df['children'].fillna(0)
+df['agent']=df['agent'].fillna(0)
+```
+
+Fill value that appears most often in the country column.
+```python
+df['country']=df['country'].fillna(df['country'].mode().index[0])
+```
+
+Dropping variable because it has 94.31% missing data.
+```python
+df=df.drop(['company'], axis=1)
+```
 
 **For the full notebook, please check out Customer Churn Analysis.Rmd or html file in the "code" folder.**
 
