@@ -74,15 +74,34 @@ cdf[, 'Churn'] <- as.factor(cdf[, 'Churn'])
 Exploratory Data Analysis
 ---
 <table>
-  <tr><th colspan=2>Univariate Analysis</th></tr>
+  <tr><th colspan=2>Univariate & Bivariate Analysis</th></tr>
   <tr><td><img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_deposit_type.png?raw=true"> </td>
   <td><img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_hoteltype.png?raw=true"> </td></tr>
   <tr><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_repeatedguests.png?raw=true"> </td><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_year.png?raw=true"> </td></tr>
-  <tr><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/hotel_type.png?raw=true"> </td><td> </td></tr>
-
-
+  <tr><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/hotel_type.png?raw=true"> </td><td> <img src="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_specialreq.png?raw=true"></td></tr>
 </table>
 
+* adfadf
+* drdf
+
+![adr](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_month_adr.png?raw=true)
+![month](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/c_month.png?raw=true)
+* daffdaf
+* adfadf
+
+![top10](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/top10.png?raw=true)
+![market_s](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/market_segment.png?raw=true)
+* adsfdafag
+* adsfafaf
+
+![m_seg_wknight](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/segment_wknight_hotel.png?raw=true)
+![m_seg_wknd](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/segment_wknd_hotel.png?raw=true)
+* dafafdagf
+* adfaf
+
+![lead](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/leadtime.png?raw=true)
+* adsfaf
+* asdfasfd
 
 Solution
 ---
