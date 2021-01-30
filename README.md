@@ -50,15 +50,39 @@ Drop status because "is_cancelled" feature already determines whether the guest 
 df=df.drop(['reservation_status', 'reservation_status_date'], axis=1)
 ```
 
-#### Recoding: 
-Recode some of the categorical variables for simplicity.
-```r
-cdf$SeniorCitizen <- as.factor(mapvalues(cdf$SeniorCitizen, from=c("0","1"), to=c("No", "Yes")))
-cdf$MultipleLines <- as.factor(mapvalues(cdf$MultipleLines, from=c("No phone service"), to=c("No")))
+Dropped outlier.
+```python
+df=df[df['adr'] < 5000]
+```
 
-for (i in 9:14){
-  cdf[,i] <- as.factor(mapvalues(cdf[,i], from=c("No internet service"), to=c("No")))
-}
+ADR w/ Outlier | ADR w/o Outlier
+:-------------------------:|:-------------------------:
+
+Drop more variables after looking at correlation matrix.
+```python
+df=df.drop(columns=['reserved_room_type', 'assigned_room_type', 'agent'])
+```
+
+#### Recoding: 
+Recode data types.
+```python
+df['children']=df['children'].astype('int64')
+df['country']=df['country'].astype('str')
+```
+
+Label Encoding method to convert categorical variables into numeric for machine learning algorithms.
+```python
+le = preprocessing.LabelEncoder()
+df['hotel']=le.fit_transform(df['hotel'])
+df['arrival_date_month']=le.fit_transform(df['arrival_date_month'])
+df['meal']=le.fit_transform(df['meal'])
+df['country']=le.fit_transform(df['country'])
+df['market_segment']=le.fit_transform(df['market_segment'])
+df['distribution_channel']=le.fit_transform(df['distribution_channel'])
+df['reserved_room_type']=le.fit_transform(df['reserved_room_type'])
+df['assigned_room_type']=le.fit_transform(df['assigned_room_type'])
+df['deposit_type']=le.fit_transform(df['deposit_type'])
+df['customer_type']=le.fit_transform(df['customer_type'])
 ```
 
 Recode the dependent variable as a factor in the clean data frame instead of characters.
