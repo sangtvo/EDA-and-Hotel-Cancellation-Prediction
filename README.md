@@ -59,9 +59,9 @@ ADR w/ Outlier | ADR w/o Outlier
 :-------------------------:|:-------------------------:
 ![ADRo](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/adr_outlier.png?raw=true) | ![ADRnoo](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/adr_nooutlier.png?raw=true)
 
-Drop more variables after looking at correlation matrix.
+Drop more variables after looking at correlation matrix and what variable is relevant to the target variable, ***is_canceled***.
 ```python
-df=df.drop(columns=['reserved_room_type', 'assigned_room_type', 'agent'])
+df=df.drop(columns=['reserved_room_type', 'assigned_room_type', 'agent', 'country'])
 ```
 
 #### Recoding: 
@@ -190,8 +190,9 @@ Exploratory Data Analysis
 * The lead time is the number of days that elapsed between the entering date of the booking into the system and the arrival date.
   * Roughly after 50 days, bookings are more likely to be canceled.
 
+#### Correlation Matrix:
 ![Corr](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/corr.png?raw=true)
-* Removed some high correlated features and that are irrelevant to the study: reserved & assigned room type.
+* Removed some high correlated features (>0.80) and that are irrelevant to the study: reserved & assigned room type.
 
 Solution
 ---
