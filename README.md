@@ -9,11 +9,12 @@ Table of Contents
 4. [Data Preprocessing/Cleaning](#data-preprocessingcleaning)
 5. [Exploratory Data Analysis](#exploratory-data-analysis)
 6. [Logistic Regression (Base)](#logistic-regression)
-7. [Step-wise Logistic Regression](#step-wise-logistic-regression)
-8. [Decision Tree](#decision-tree)
-9. [Random Forest](#random-forest)
-10. [Solution](#solution)
-11. [Key Takeaways](#key-takeaways)
+7. [Random Forest](#step-wise-logistic-regression)
+8. [XGBoost](#decision-tree)
+9. [Gaussian Naive Bayes](#random-forest)
+10. [KNN](#solution)
+11. [Solution](#solution)
+12. [Key Takeaways](#key-takeaways)
 
 <a name="https://github.com/sangtvo/Customer-Churn-Analysis#general-information"/>
 <a name="https://github.com/sangtvo/Customer-Churn-Analysis#summary"/>
