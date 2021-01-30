@@ -57,6 +57,7 @@ df=df[df['adr'] < 5000]
 
 ADR w/ Outlier | ADR w/o Outlier
 :-------------------------:|:-------------------------:
+![ADRo](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/adr_outlier.png?raw=true) | ![ADRnoo](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/adr_nooutlier.png?raw=true)
 
 Drop more variables after looking at correlation matrix.
 ```python
@@ -83,11 +84,6 @@ df['reserved_room_type']=le.fit_transform(df['reserved_room_type'])
 df['assigned_room_type']=le.fit_transform(df['assigned_room_type'])
 df['deposit_type']=le.fit_transform(df['deposit_type'])
 df['customer_type']=le.fit_transform(df['customer_type'])
-```
-
-Recode the dependent variable as a factor in the clean data frame instead of characters.
-```r
-cdf[, 'Churn'] <- as.factor(cdf[, 'Churn'])
 ```
 
 #### Missing Data:
@@ -193,6 +189,9 @@ Exploratory Data Analysis
 ![lead](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/leadtime.png?raw=true)
 * The lead time is the number of days that elapsed between the entering date of the booking into the system and the arrival date.
   * Roughly after 50 days, bookings are more likely to be canceled.
+
+
+![Corr](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/corr.png?raw=true)
 
 Solution
 ---
