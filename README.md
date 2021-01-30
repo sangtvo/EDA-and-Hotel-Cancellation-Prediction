@@ -190,8 +190,8 @@ Exploratory Data Analysis
 * The lead time is the number of days that elapsed between the entering date of the booking into the system and the arrival date.
   * Roughly after 50 days, bookings are more likely to be canceled.
 
-
 ![Corr](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/corr.png?raw=true)
+* Removed some high correlated features and that are irrelevant to the study: reserved & assigned room type.
 
 Solution
 ---
