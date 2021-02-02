@@ -1,5 +1,5 @@
 # Capstone Project: EDA &amp; Hotel Cancellation Prediction
-> This study analyzes hotel data from the southern part of Portugal to identify why guests are cancelling their reservations and the potential indicators that are causing them to do so. The original data is derived from Nuno Antonio, Ana Almeida, and Luis Nunes who are researchers from Lisbon University Institute and later cleaned/uploaded on [Kaggle](https://www.kaggle.com/jessemostipak/hotel-booking-demand). Python is the choice of program and will be using (1) KNN, (2) Logistic Regression, and (3) Random Forest techniques.
+> This study analyzes hotel data from the southern part of Portugal to identify why guests are cancelling their reservations and the potential indicators that are causing them to do so. The original data is derived from Nuno Antonio, Ana Almeida, and Luis Nunes who are researchers from Lisbon University Institute and later cleaned/uploaded on [Kaggle](https://www.kaggle.com/jessemostipak/hotel-booking-demand). Python is the choice of program and will be using (1) KNN (2) Logistic Regression and (3) Random Forest techniques.
 
 Table of Contents
 ---
@@ -345,7 +345,7 @@ The random forest algorithm performs much better than KNN and logistic regressio
 
 ![rf_impfeat](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/rf_featimp.png?raw=true)
 * Based on this top 10 important features, it is much different compared to the logistic regression model important features.
-* The important features that should be targeted first are the types of deposit, lead time, special requests, market segment, and prior cancellations which the 
+* The important features that should be targeted first are the types of deposit, lead time, special requests, market segment, and prior cancellations.
 
 Solution
 ---
