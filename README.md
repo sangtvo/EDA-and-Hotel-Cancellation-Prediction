@@ -1,5 +1,5 @@
 # Capstone Project: EDA &amp; Hotel Cancellation Prediction
-> This study analyzes hotel data from the southern part of Portugal to identify why guests are cancelling their reservations and the potential indicators that are causing them to do so. The original data is derived from Nuno Antonio, Ana Almeida, and Luis Nunes who are researchers from Lisbon University Institute and later cleaned/uploaded on [Kaggle](https://www.kaggle.com/jessemostipak/hotel-booking-demand). Python is the choice of program and will be using binary logistic regression to determine the most important indicators.
+> This study analyzes hotel data from the southern part of Portugal to identify why guests are cancelling their reservations and the potential indicators that are causing them to do so. The original data is derived from Nuno Antonio, Ana Almeida, and Luis Nunes who are researchers from Lisbon University Institute and later cleaned/uploaded on [Kaggle](https://www.kaggle.com/jessemostipak/hotel-booking-demand). Python is the choice of program and will be using (1) KNN, (2) Logistic Regression, and (3) Random Forest techniques.
 
 Table of Contents
 ---
@@ -8,34 +8,32 @@ Table of Contents
 3. [Tech Stack](#tech-stack)
 4. [Data Preprocessing/Cleaning](#data-preprocessingcleaning)
 5. [Exploratory Data Analysis](#exploratory-data-analysis)
-6. [Logistic Regression (Base)](#logistic-regression)
-7. [Random Forest](#step-wise-logistic-regression)
-8. [XGBoost](#decision-tree)
-9. [Gaussian Naive Bayes](#random-forest)
-10. [KNN](#solution)
-11. [Solution](#solution)
-12. [Key Takeaways](#key-takeaways)
+6. [K-Nearest Neighbors](#k-nearest-neighbors-knn)
+7. [Logistic Regression](#logistic-regression)
+8. [Random Forest](#random-forest)
+9. [Solution](#solution)
+10. [Key Takeaways](#key-takeaways)
 
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#general-information"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#summary"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#tech-stack"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#data-preprocessingcleaning"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#exploratory-data-analysis"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#logistic-regression"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#step-wise-logistic-regression"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#decision-tree"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#random-forest"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#solution"/>
-<a name="https://github.com/sangtvo/Customer-Churn-Analysis#key-takeaways"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#general-information"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#summary"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#tech-stack"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#data-preprocessingcleaning"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#exploratory-data-analysis"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#k-nearest-neighbors-knn"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#logistic-regression"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#random-forest"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#solution"/>
+<a name="https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction#key-takeaways"/>
 
 General Information
 ---
-The capstone project is part of a graduate course in order to graduate at Western Governor's University. A completion of a capstone prospectus, executive summary, and a multimedia presentation is required to graduate, but will not be uploaded to my repository. 
+The capstone project is part of a graduate course in order to graduate at Western Governor's University. A completion of a capstone prospectus, executive summary, and a power point presentation is required to graduate, but will not be uploaded to my repository. 
 
+**To expand the project even further (originally binary logistic regression), KNN and random forest analysis are added.**
 
 Summary
 ---
-The winning model is the **random forest** algorithm with an overall accuracy of 80.21% and AUC of 81.50%. This means that the model will correctly predict churn 80.21% of the time and there is a 81.50% chance that the model can distinguish between positive (churn) and negative (no churn) classes. In order for the telecommunications company to reduce the current churn rate of 26.58%, the company should focus on contracts (month-to-month specifically), tenure length, and total charges to start. The company should give incentives such as reduced pricing or discounted extra services for long-term customers to keep them from leaving to another competitor. 
+The winning model is the **random forest** algorithm with an overall accuracy of 84.50% and precision of 87.43%. This means that the model will correctly predict hotel cancellation 80.21% of the time. In order for hotel management company to reduce their current hotel cancellation rate of ~37%, management should focus on requiring deposits because 80% of the data require no deposits. This can be mitigated if hotels require fees for cancellation or mandatory deposits. When hotels have stricter cancellation policies, guests are less inclined to cancel their reservation and hotel revenue will increase. In addition, lead time is another factor to be targeted. Guests who hold reservations for long periods of time are more likley to cancel. If management offers special offers or larger discount for on-site services when booking in advance, guests are less likely to cancel. 
 
 Tech Stack
 ---
@@ -355,12 +353,17 @@ Solution
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 Precision | 77.17% | 86.02% | 87.43%
 Accuracy | 81.44% | 79.97% | 84.50%
-* The best model is the ***random forest model*** with an overall accuracy of 84.50% which means that the model will correctly predict hotel guest cancellation 84.50% of the time. 
+* The best model is the **random forest model** with an overall accuracy of 84.50% which means that the model will correctly predict hotel guest cancellation 84.50% of the time. 
 
-This study has found a random forest model with the 10 most significant factors in hotel cancellations and the recommended course of action for hotel management should be focusing at least 3 factors to reduce cancellation rates. For any business, a good objective is for businesses to focus the larger and easier variables to mitigate their losses due to resources and manpower. 
+This study has found the random forest model as the winning model and the recommended course of action for hotel management should be focusing at least 3 factors to reduce cancellation rates based on the top 10 important features. For any business, a good objective is for businesses to focus the larger and easier variables to mitigate their losses due to resources and manpower. 
 
 It is evident that city cancellations are more dominant in the southern part of Portugal than resort hotels and average to high lead times have higher cancellation rates. . Perhaps city hotels should remodel or become attractive with amenities like a resort hotel, yet affordable for guests. As for lead times, the longer a guest holds a reservation, the more likely they are to cancel. In order to mitigate this risk, hotels can offer larger discounts or non-refundable bookings for booking in advance. Another option is to provide free amenities like breakfast, Wi-Fi, laundry or dry cleaning, and pool access. One factor that increases cancellation rates are deposit types. At least 80% of the data require no deposits. This is quite high and can be mitigated by requiring fees for cancellation or mandatory deposits. When hotels have stricter cancellation policies, guests are less inclined to cancel the reservation. 
 
 Key Takeaways
 ---
-
+* Roughly 75-80% of the guest reservations do not require deposits and a little over 33% of those guests cancel.
+* 2016 is the most visited year which doubled compared to the previous year. 
+* At least 50% of the bookings are made through an online travel agency and roughly 25% are offline travel agents and tour operators. 
+* Aviation market segment don't bother booking resort hotels and city hotels are much more favorable.
+* Roughly after 50 days, bookings are more likely to be cancelled. 
+* Random forest model outperforms both KNN and logistic regression models with an overall accuracy of 84.50%. 
