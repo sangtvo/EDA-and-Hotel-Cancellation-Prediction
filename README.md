@@ -345,13 +345,21 @@ Accuracy:  84.4431 %
 
 The random forest algorithm performs much better than KNN and logistic regression in terms of both precision and accuracy. The model will correctly predict the positives 87.26% of the time and an overall accuracy of 84.44%. 
 
-[rf_impfeat](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/rf_featimp.png?raw=true)
+![rf_impfeat](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/rf_featimp.png?raw=true)
 * Based on this top 10 important features, it is much different compared to the logistic regression model important features.
-* The top 5 important features are the types of deposit, lead time, special requests, market segment, and prior cancellations. 
+* The important features that should be targeted first are the types of deposit, lead time, special requests, market segment, and prior cancellations which the 
 
 Solution
 ---
- 
+ MODELS | KNN | Logistic Regression | Random Forest
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+Precision | 77.17% | 86.02% | 87.43%
+Accuracy | 81.44% | 79.97% | 84.50%
+* The best model is the ***random forest model*** with an overall accuracy of 84.50% which means that the model will correctly predict hotel guest cancellation 84.50% of the time. 
+
+This study has found a random forest model with the 10 most significant factors in hotel cancellations and the recommended course of action for hotel management should be focusing at least 3 factors to reduce cancellation rates. For any business, a good objective is for businesses to focus the larger and easier variables to mitigate their losses due to resources and manpower. 
+
+It is evident that city cancellations are more dominant in the southern part of Portugal than resort hotels and average to high lead times have higher cancellation rates. . Perhaps city hotels should remodel or become attractive with amenities like a resort hotel, yet affordable for guests. As for lead times, the longer a guest holds a reservation, the more likely they are to cancel. In order to mitigate this risk, hotels can offer larger discounts or non-refundable bookings for booking in advance. Another option is to provide free amenities like breakfast, Wi-Fi, laundry or dry cleaning, and pool access. One factor that increases cancellation rates are deposit types. At least 80% of the data require no deposits. This is quite high and can be mitigated by requiring fees for cancellation or mandatory deposits. When hotels have stricter cancellation policies, guests are less inclined to cancel the reservation. 
 
 Key Takeaways
 ---
