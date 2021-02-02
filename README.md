@@ -38,6 +38,11 @@ The winning model is the **random forest** algorithm with an overall accuracy of
 Tech Stack
 ---
 * Python
+  * NumPy
+  * Pandas
+  * Scikit-Learn
+  * Seaborn
+  * Matplotlib
 * VS Code
 * Jupyter Notebook
 
