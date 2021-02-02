@@ -301,6 +301,8 @@ Accuracy:  79.9704 %
 
 This model performs slightly worse than KNN algorithms where accuracy is roughly ~2% less. However, the precision is much higher for logistic regression, about ~9% more. This means that the logistic regression model can correctly predict the positives 86.02% of the time. 
 
+![LR_impfeat](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/lr_featimp.png?raw=true)
+* Based on the logistic regression model, the top 5 important predictors that cause guests to cancel their reservations or not are: car parking spaces, guests who cancelled before or not, hotel deposits, and market segment. 
 
 Random Forest
 ---
@@ -342,6 +344,10 @@ Accuracy:  84.4431 %
 ```
 
 The random forest algorithm performs much better than KNN and logistic regression in terms of both precision and accuracy. The model will correctly predict the positives 87.26% of the time and an overall accuracy of 84.44%. 
+
+[rf_impfeat](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/rf_featimp.png?raw=true)
+* Based on this top 10 important features, it is much different compared to the logistic regression model important features.
+* The top 5 important features are the types of deposit, lead time, special requests, market segment, and prior cancellations. 
 
 Solution
 ---
