@@ -144,6 +144,26 @@ Dropping variable because it has 94.31% missing data.
 df=df.drop(['company'], axis=1)
 ```
 
+Separate the target variable, ***is_canceled***.
+```python
+X = df.drop(columns=['is_canceled'])
+y = df['is_canceled']
+```
+
+Split the data for modeling (70% train, 30% test)
+```python
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=123)
+```
+
+Standardizing the data for implementable machine learning algorithms.
+```python
+scaler = StandardScaler()
+scaler.fit(X_train)
+
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+```
+
 **For the full notebook, please check out Customer Churn Analysis.Rmd or html file in the "code" folder.**
 
 Exploratory Data Analysis
@@ -194,6 +214,52 @@ Exploratory Data Analysis
 #### Correlation Matrix:
 ![Corr](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/images/corr.png?raw=true)
 * Removed some high correlated features (>0.80) and that are irrelevant to the study: reserved & assigned room type.
+
+K-Nearest Neighbors (KNN)
+---
+K-Nearest Neighbors is a simple supervised machine learning algorithm that takes a data point and looks at the "k" closest labeled data point. This unassigned data point is assigned with the label that is the majority of the "k" closest data points.
+
+Running the KNN model.
+```python
+knn_model = KNeighborsClassifier(n_neighbors=5)
+knn_model.fit(X_train, y_train)
+y_pred_knn = knn_model.predict(X_test)
+```
+
+Confusion matrix.
+```python
+print(confusion_matrix(y_test, y_pred_knn))
+print(classification_report(y_test, y_pred_knn))
+```
+```
+[[19969  2722]
+ [ 3926  9200]]
+              precision    recall  f1-score   support
+
+           0       0.84      0.88      0.86     22691
+           1       0.77      0.70      0.73     13126
+
+    accuracy                           0.81     35817
+   macro avg       0.80      0.79      0.80     35817
+weighted avg       0.81      0.81      0.81     35817
+```
+```python
+precision_knn =  precision_score(y_test, y_pred_knn)
+acc_knn = accuracy_score(y_test, y_pred_knn)
+print('Precision: ',round(precision_knn * 100,4), '%')
+print('Accuracy: ',round(acc_knn * 100,4), '%')
+```
+```
+Precision:  77.1683 %
+Accuracy:  81.439 %
+```
+
+Logistic Regression
+---
+
+Random Forest
+---
+
 
 Solution
 ---
