@@ -253,13 +253,95 @@ print('Accuracy: ',round(acc_knn * 100,4), '%')
 Precision:  77.1683 %
 Accuracy:  81.439 %
 ```
+* Precision is the ratio of correctly predicted observations to the total positive predicted observations.
+  * TP / (TP + FP)
+* Accuracy is the ratio of correct predictions to the total predictions. 
+  * (TP + TN) / (TP + FP + FN + TN)
+
+The goal of this study is to have at least 80% accuracy and the KNN algorithm meets this criteria. However, let's take a look at other algorithms. 
 
 Logistic Regression
 ---
+(Binary) logistic regression is a common classification algorithm when the categorical response have only two possible outcomes, in this case, cancelled or not cancelled. This involves regressing the predictor variables on a binary outcome using a binomial link function.
+
+Run the logistic regression model.
+```python
+lr_model = LogisticRegression()
+lr_model.fit(X_train, y_train)
+y_pred_lr = lr_model.predict(X_test)
+```
+
+Confusion matrix.
+```python
+print(confusion_matrix(y_test, y_pred_lr))
+print(classification_report(y_test, y_pred_lr))
+```
+```
+[[21536  1155]
+ [ 6019  7107]]
+              precision    recall  f1-score   support
+
+           0       0.78      0.95      0.86     22691
+           1       0.86      0.54      0.66     13126
+
+    accuracy                           0.80     35817
+   macro avg       0.82      0.75      0.76     35817
+weighted avg       0.81      0.80      0.79     35817
+```
+```python
+precision_lr =  precision_score(y_test, y_pred_lr)
+acc_lr = accuracy_score(y_test, y_pred_lr)
+print('Precision: ',round(precision_lr * 100,4), '%')
+print('Accuracy: ',round(acc_lr * 100,4), '%')
+```
+```
+Precision:  86.0203 %
+Accuracy:  79.9704 %
+```
+
+This model performs slightly worse than KNN algorithms where accuracy is roughly ~2% less. However, the precision is much higher for logistic regression, about ~9% more. This means that the logistic regression model can correctly predict the positives 86.02% of the time. 
+
 
 Random Forest
 ---
+Random forest is a supervised machine learning algorithm that creates multiple decision trees that are randomized. It is much more robust and accurate than decision trees.
 
+Run the random forest model.
+```python
+rf_model = RandomForestClassifier(min_samples_leaf=10, min_samples_split=10, n_estimators=100)
+rf_model.fit(X_train, y_train)
+y_pred_rf = rf_model.predict(X_test)
+```
+
+Confusion matrix.
+```python
+print(confusion_matrix(y_test, y_pred_rf))
+print(classification_report(y_test, y_pred_rf))
+```
+```
+[[21400  1291]
+ [ 4281  8845]]
+              precision    recall  f1-score   support
+
+           0       0.83      0.94      0.88     22691
+           1       0.87      0.67      0.76     13126
+
+    accuracy                           0.84     35817
+   macro avg       0.85      0.81      0.82     35817
+weighted avg       0.85      0.84      0.84     35817
+```
+```python
+precision_rf =  precision_score(y_test, y_pred_rf)
+acc_rf = accuracy_score(y_test, y_pred_rf)
+print('Precision: ',round(precision_rf * 100,4), '%')
+print('Accuracy: ',round(acc_rf * 100,4), '%')
+```
+```
+Precision:  87.2632 %
+Accuracy:  84.4431 %
+```
+
+The random forest algorithm performs much better than KNN and logistic regression in terms of both precision and accuracy. The model will correctly predict the positives 87.26% of the time and an overall accuracy of 84.44%. 
 
 Solution
 ---
