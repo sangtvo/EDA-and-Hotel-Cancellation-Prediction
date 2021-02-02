@@ -167,7 +167,7 @@ X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 ```
 
-**For the full notebook, please check out Customer Churn Analysis.Rmd or html file in the "code" folder.**
+**For the full notebook, please check out the [Jupyter Notebook](https://github.com/sangtvo/EDA-and-Hotel-Cancellation-Prediction/blob/main/code/Hotel%20Cancellation%20Prediction.ipynb)**
 
 Exploratory Data Analysis
 ---
