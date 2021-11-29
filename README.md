@@ -1,4 +1,4 @@
-# Capstone Project: EDA &amp; Hotel Cancellation Prediction
+# EDA &amp; Hotel Cancellation Prediction
 > This study analyzes hotel data from the southern part of Portugal to identify why guests are cancelling their reservations and the potential indicators that are causing them to do so. The original data is derived from Nuno Antonio, Ana Almeida, and Luis Nunes who are researchers from Lisbon University Institute and later cleaned/uploaded on [Kaggle](https://www.kaggle.com/jessemostipak/hotel-booking-demand). Python is the choice of program and will be using (1) KNN (2) Logistic Regression and (3) Random Forest techniques.
 
 Table of Contents
@@ -27,9 +27,7 @@ Table of Contents
 
 General Information
 ---
-The capstone project is part of a graduate course in order to graduate at Western Governor's University. A completion of a capstone prospectus, executive summary, and a power point presentation is required to graduate, but will not be uploaded to my repository. 
-
-**To expand the project even further (originally binary logistic regression), KNN and random forest analysis are added.**
+An EDA project with supervised machine learning algorithms.
 
 Summary
 ---
